@@ -181,13 +181,13 @@
              {/* PENDING RESTAURANTS TAB */}
              {activeTab === 'restaurants' && (
                <div>
-                 <h2 className="text-xl font-semibold mb-4">
+                 <h2 className="text-xl font-semibold text-black mb-4">
                    ⏳ Pending Restaurant Approvals
                  </h2>
                  <div className="space-y-3">
                    {pendingRestaurants.map(restaurant => (
                      <div key={restaurant.restaurantId} className="border p-4 rounded-lg">
-                       <h3 className="font-semibold text-lg">{restaurant.name}</h3>
+                       <h3 className="text-lg font-semibold text-black">{restaurant.name}</h3>
                        <p className="text-sm text-gray-600">Owner: {restaurant.owner?.name}</p>
                        <p className="text-sm text-gray-600">Address: {restaurant.address}</p>
                        <p className="text-sm text-gray-600">Applied: {new Date().toLocaleDateString()}</p>

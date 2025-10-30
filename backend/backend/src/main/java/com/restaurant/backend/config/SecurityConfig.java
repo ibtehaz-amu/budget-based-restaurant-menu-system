@@ -30,14 +30,14 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
-                        // ✅ PUBLIC ENDPOINTS - No authentication required
+                        //  PUBLIC ENDPOINTS - No authentication required
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/dishes/**").permitAll()
-                        .requestMatchers("/api/restaurants/**").permitAll() // ✅ YEH ADD KARO
-                        .requestMatchers("/api/test/**").permitAll()        // ✅ YEH ADD KARO
-                        .requestMatchers("/error").permitAll()              // ✅ YEH ADD KARO
+                        .requestMatchers("/api/restaurants/**").permitAll()
+                        .requestMatchers("/api/test/**").permitAll()
+                        .requestMatchers("/error").permitAll()
 
-                        // ✅ ROLE-BASED ACCESS - Authentication required
+                        //  ROLE-BASED ACCESS - Authentication required
                         .requestMatchers("/api/owner/**").hasAuthority("OWNER")
                         .requestMatchers("/api/admin/**").hasAuthority("ADMIN")
                         .requestMatchers("/api/student/**").hasAuthority("STUDENT")
@@ -47,13 +47,13 @@ public class SecurityConfig {
                         .requestMatchers("/api/feedback/owner/**").hasAuthority("OWNER")
                         .requestMatchers("/api/feedback/admin/**").hasAuthority("ADMIN")
 
-                        // ✅ BAaki sabko authenticate karo
+                        //   sabko authenticate karo
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-                // ✅ JWT FILTER ADD KARO
+
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
@@ -74,8 +74,10 @@ public class SecurityConfig {
                 "http://127.0.0.1:3000",
                 "http://localhost:3001",
                 "http://127.0.0.1:3001",
-                "http://10.11.20.2:3000",     // ✅ YEH ADD KARO - Tera actual frontend URL
-                "http://10.11.20.2:3001"      // ✅ YEH BHI ADD KARO
+                "http://10.11.20.2:3000",
+                "http://10.11.20.2:3001",
+                "http://10.65.98.3:3000",
+                "http://10.65.98.3:3001"
         ));
 
         // Allowed methods

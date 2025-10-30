@@ -664,18 +664,18 @@
          {showAddRestaurantForm && (
            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
              <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-               <h3 className="text-xl font-bold mb-4">Add New Restaurant</h3>
+               <h3 className="text-black font-bold mb-4">Add New Restaurant</h3>
                <div className="space-y-4">
                  <input
                    type="text"
                    placeholder="Restaurant Name *"
-                   className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                    value={newRestaurant.name}
                    onChange={(e) => setNewRestaurant({...newRestaurant, name: e.target.value})}
                  />
                  <textarea
                    placeholder="Restaurant Address *"
-                   className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                    rows="3"
                    value={newRestaurant.address}
                    onChange={(e) => setNewRestaurant({...newRestaurant, address: e.target.value})}
@@ -685,7 +685,7 @@
                      <label className="block text-sm text-gray-600 mb-1">Opening Time</label>
                      <input
                        type="time"
-                       className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                        value={newRestaurant.openingTime}
                        onChange={(e) => setNewRestaurant({...newRestaurant, openingTime: e.target.value})}
                      />
@@ -694,7 +694,7 @@
                      <label className="block text-sm text-gray-600 mb-1">Closing Time</label>
                      <input
                        type="time"
-                       className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
                        value={newRestaurant.closingTime}
                        onChange={(e) => setNewRestaurant({...newRestaurant, closingTime: e.target.value})}
                      />

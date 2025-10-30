@@ -40,7 +40,7 @@
        'Non-Veg': { icon: '🍗', color: 'bg-red-100', textColor: 'text-red-800', borderColor: 'border-red-200' },
        'Drinks': { icon: '🥤', color: 'bg-blue-100', textColor: 'text-blue-800', borderColor: 'border-blue-200' }
      };
-     return config[category] || { icon: '🍽️', color: 'bg-gray-100', textColor: 'text-gray-800', borderColor: 'border-gray-200' };
+     return config[category] || { icon: '🍽️', color: 'bg-black-100', textColor: 'text-black-800', borderColor: 'border-gray-200' };
    };
 
    // ✅ API Call

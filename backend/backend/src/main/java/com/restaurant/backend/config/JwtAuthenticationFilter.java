@@ -24,13 +24,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         this.jwtUtil = jwtUtil;
     }
 
-    // ✅ YEH IMPORTANT METHOD ADD KARO - PUBLIC ENDPOINTS KO SKIP KARNE KE LIYE
+    // PUBLIC ENDPOINTS KO SKIP KARNE KE LIYE
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getServletPath();
         System.out.println("🔍 Checking path: " + path);
 
-        // ✅ PUBLIC ENDPOINTS - INPAR JWT FILTER NAHI CHALEGA
+        //  PUBLIC ENDPOINTS - INPAR JWT FILTER NAHI CHALEGA
         boolean shouldSkip = path.startsWith("/api/auth/") ||
                 path.startsWith("/api/dishes/") ||
                 path.startsWith("/api/restaurants/") ||

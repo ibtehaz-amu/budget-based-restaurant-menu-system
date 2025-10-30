@@ -17,6 +17,5 @@ public class Admin extends User {
         super(name, email, password, User.Role.ADMIN);
     }
 
-    // ❌ NO EXTRA FIELDS NEEDED - Simple is better!
-    // ❌ NO GETTERS/SETTERS NEEDED
+
 }

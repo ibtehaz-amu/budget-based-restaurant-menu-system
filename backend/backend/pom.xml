@@ -29,11 +29,25 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- ✅ POSTGRESQL DEPENDENCY -->
+		<!-- ✅ H2 IN-MEMORY DATABASE -->
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
+
+		<!-- ❌ MYSQL DEPENDENCIES REMOVE KARDO -->
+		<!--
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+		-->
 
 		<!-- Spring Security -->
 		<dependency>

@@ -65,7 +65,7 @@
          config.body = JSON.stringify(options.body);
        }
 
-       const response = await fetch(`http://localhost:8081/api${url}`, config);
+       const response = await fetch(`https://budget-based-restaurant-menu-system.onrender.com/api${url}`, config);
 
        if (!response.ok) {
          const errorText = await response.text();

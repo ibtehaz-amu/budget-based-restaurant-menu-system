@@ -77,7 +77,9 @@ public class SecurityConfig {
                 "http://10.11.20.2:3000",
                 "http://10.11.20.2:3001",
                 "http://10.65.98.3:3000",
-                "http://10.65.98.3:3001"
+                "http://10.65.98.3:3001",
+                "https://budget-based-restaurant-menu-system.vercel.app", //YOUR VERCEL URL
+                "https://*.vercel.app"
         ));
 
         // Allowed methods

@@ -30,6 +30,7 @@ public class SecurityConfig {
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authz -> authz
+                        .requestMatchers("/", "/health", "/home").permitAll()
                         //  PUBLIC ENDPOINTS - No authentication required
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/dishes/**").permitAll()
